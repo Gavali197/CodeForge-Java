@@ -32,9 +32,22 @@ public class Arraylist1 {
         System.out.println(num);
     }
 
+    public static void reverseString(String string){
+        ArrayList<Character>list = new ArrayList<>();
+        for (int i = 0; i < string.length(); i++) {
+            list.add(string.charAt(i));
+        }
+
+        for (int i = list.size() - 1; i >= 0; i--) {
+            System.out.print(" " + list.get(i));
+        }
+    }
+
     public static void main(String[] args) {
         AddString("Hemant");
 
         // addNumbers();
+
+        reverseString("HemantGavali");
     }
 }
