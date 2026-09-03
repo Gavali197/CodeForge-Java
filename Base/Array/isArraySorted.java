@@ -7,7 +7,7 @@ public class isArraySorted {
             if (nums[i] > nums[i + 1]) {
                 return false;
             }
-        }
+        } 
         return true;
 
     }
