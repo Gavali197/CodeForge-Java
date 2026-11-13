@@ -13,7 +13,7 @@ public class MajorityElement {
                 curr = arr[i];
             }
         }
-
+     
         System.out.println(Majority);
     }
 }
