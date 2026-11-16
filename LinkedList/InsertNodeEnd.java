@@ -13,7 +13,7 @@ class Node {
     }
 }
 
-class InsertNodeEnd{
+class InsertNodeEnd {
     Node head;
 
     // Method to insert at the end
@@ -30,7 +30,7 @@ class InsertNodeEnd{
         Node current = head;
         // As long as there is another node ahead of us, keep moving
         while (current.next != null) {
-            current = current.next; 
+            current = current.next;
         }
 
         // Step 4: We've reached the last node. Connect it to the new node.
@@ -48,16 +48,21 @@ class InsertNodeEnd{
 
     public static void main(String[] args) {
         InsertNodeEnd list = new InsertNodeEnd();
-        
-        list.insertAtEnd(10); 
+
+        list.insertAtEnd(10);
         // List: 10 -> null
-        
-        list.insertAtEnd(20); 
+
+        list.insertAtEnd(20);
         // List: 10 -> 20 -> null
-        
-        list.insertAtEnd(30); 
+
+        list.insertAtEnd(30);
         // List: 10 -> 20 -> 30 -> null
 
         list.printList();
     }
 }
+
+// If you are building a system where you frequently add to the end of a list,
+// you can add a tail pointer to your class alongside the head pointer. This
+// keeps track of the last node at all times, dropping the insertion time from
+// O(n) back down to O(1) because you don't have to search for the end anymore.
