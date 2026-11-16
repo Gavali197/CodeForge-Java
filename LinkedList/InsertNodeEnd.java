@@ -1,3 +1,8 @@
+package Java.LinkedList;
+
+/**
+ * InnerInsertNodeEnd
+ */
 class Node {
     int data;
     Node next;
@@ -8,7 +13,7 @@ class Node {
     }
 }
 
-class LinkedList {
+class InsertNodeEnd{
     Node head;
 
     // Method to insert at the end
@@ -42,7 +47,7 @@ class LinkedList {
     }
 
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        InsertNodeEnd list = new InsertNodeEnd();
         
         list.insertAtEnd(10); 
         // List: 10 -> null
