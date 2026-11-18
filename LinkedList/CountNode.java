@@ -1,9 +1,5 @@
 package Java.LinkedList;
 
-/**
-- CountNode
- */
-
 class Node {
     int data;
     Node next;
@@ -53,10 +49,9 @@ public class CountNode {
         // FIX 3: Renamed the variable to 'list' to avoid confusion with the Node class
         CountNode list = new CountNode();
 
-        list.AddNode(10);
-        list.AddNode(20);
-        list.AddNode(30);
-        list.AddNode(40);
+       for (int i = 0; i < 10; i++) {
+        list.AddNode(i);
+       }
 
         list.count();
     }
