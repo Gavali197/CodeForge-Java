@@ -1,10 +1,32 @@
 package Java.Quetions;
+import java.util.Set;
+import java.util.HashSet;
 
 /**
  * RemoveDuplicate
  */
 public class RemoveDuplicate {
 
+    //optimal Approch
+    public static boolean DuplicateArr(int[] arr){
+        Set<Integer> seen = new HashSet<>();
+
+        for(int num : arr){
+            if(seen.contains(num)){
+                System.out.print(num);
+                System.out.println(" true ");
+                return true;
+            }
+            System.out.print("  Second Line   ");
+            seen.add(num);
+            System.out.print(num);
+            
+        }
+        System.out.println("false");
+        return false;
+    }
+
+    //Sorting approch
     public static boolean sortingRemove(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
@@ -38,6 +60,7 @@ public class RemoveDuplicate {
         return false;
     }
 
+    //brute forces
     public static boolean removeSame(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -52,8 +75,9 @@ public class RemoveDuplicate {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 4, 1 };
+        int[] arr = { 1, 2, 3, 4, 2 };
         // removeSame(arr);
-        sortingRemove(arr);
+        // sortingRemove(arr);
+        DuplicateArr(arr);
     }
 }
